@@ -1,0 +1,38 @@
+.content-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    /* Ensure the container takes full viewport height */
+}
+
+.content-inner {
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 20px;
+    /* Adjust bottom padding to reduce excess space */
+}
+
+h1,
+h4,
+p {
+    margin: 0;
+    /* Remove default margins */
+    line-height: 1.5;
+    /* Consistent line-height */
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    /* Reduced margin-bottom for h1 */
+}
+
+h4 {
+    margin-bottom: 0.5rem;
+    /* Reduced margin-bottom for h4 */
+}
+
+p {
+    margin-bottom: 1rem;
+    /* Adjusted margin-bottom for paragraphs */
+}
