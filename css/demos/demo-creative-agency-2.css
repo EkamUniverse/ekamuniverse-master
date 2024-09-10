@@ -128,6 +128,15 @@ html {
 	mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+@media (max-width: 420px) {
+	.overflow-hidden h3 {
+		font-size: 18px !important;
+		/* Further reduce font size for very small screens */
+		line-height: 1.3;
+		/* Adjust line-height for better readability */
+	}
+}
+
 @media (max-width: 991px) {
 	.custom-hero-heading {
 		bottom: 80px;
@@ -519,4 +528,8 @@ html {
 /* Error Message Style */
 .error {
 	color: red;
+}
+
+.button-text{
+	color:#000
 }
