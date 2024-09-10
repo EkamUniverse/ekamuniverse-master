@@ -287,7 +287,7 @@ li {
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 438px) {
 	.header-logo img {
 		width: 115px;
 		height: 30px;
