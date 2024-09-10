@@ -9,8 +9,9 @@
 
 	<title>Ekam Universe</title>
 
-	<meta name="keywords" content="Web Development, App Development, SEO, Graphics Designing, UX Designing, TechOps" /	>
-	<meta name="description" content="Ekam Universe - Best Web Development, App Development, SEO, Graphics Designing, UX Designing, TechOps Agency">
+	<meta name="keywords" content="Web Development, App Development, SEO, Graphics Designing, UX Designing, TechOps" />
+	<meta name="description"
+		content="Ekam Universe - Best Web Development, App Development, SEO, Graphics Designing, UX Designing, TechOps Agency">
 	<meta name="author" content="ekamuniverse.com">
 
 	<!-- Favicon -->
@@ -92,7 +93,8 @@
 										</nav>
 									</div>
 									<a class="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient text-quaternary anim-hover-translate-top-5px transition-2ms ms-4"
-										href="#talkus"><span class="px-lg-4 d-block ws-nowrap">Contact Us</span></a>
+										href="https://calendly.com/ekamuniverse/consultation"><span
+											class="px-lg-4 d-block ws-nowrap">Contact Us</span></a>
 									<button class="btn header-btn-collapse-nav text-dark" data-bs-toggle="collapse"
 										data-bs-target=".header-nav-main nav">
 										<i class="fas fa-bars"></i>
@@ -451,9 +453,9 @@
 									<textarea id="message" name="message" rows="4" required></textarea>
 
 									<button id="submit-button"
-										class="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient border-1 custom-border-radius-6"
+										class="btn btn-primary font-weight-semibold text-3 py-lg-3 btn-gradient border-1 custom-border-radius-6 text-quaternary anim-hover-translate-top-5px transition-2ms"
 										type="submit">
-										<span id="button-text">Send</span>
+										<span id="button-text">Grow Your Business Now!</span>
 										<div id="button-loader" class="spinner" style="display: none;"></div>
 									</button>
 								</form>
@@ -469,69 +471,7 @@
 
 
 							<script>
-								document.getElementById("contact-form").addEventListener("submit", function (event) {
-									event.preventDefault(); // Prevent default form submission
-
-									// Disable the button and show the circular loader
-									var button = document.getElementById("submit-button");
-									var buttonText = document.getElementById("button-text");
-									var buttonLoader = document.getElementById("button-loader");
-
-									button.disabled = true;
-									buttonText.style.display = "none";
-									buttonLoader.style.display = "inline-block";
-
-
-									// Get form data
-									const formData = new FormData(this);
-
-									// Send the form data using fetch API
-									fetch("https://script.google.com/macros/s/AKfycbwoSAV1I-TF_qOx_Yw08iFRCajB5r6Hb_ldmF4hU2aRiyj6OnVc-N16Gag7DKWmERALfQ/exec", {
-										method: "post",
-										body: formData
-									}).then(response => {
-										if (!response.ok) {
-											throw new Error("Network response was not ok.");
-										}
-										return response.text(); // Or response.json() if your script returns JSON
-									}).then(data => {
-										// Show success modal popup
-										showModal("Message sent successfully!", "success");
-
-										// Clear form fields
-										document.getElementById("contact-form").reset();
-									}).catch(error => {
-										console.error("Error!", error.message);
-										// Show error modal popup
-										showModal("Something went wrong. Please try again.", "error");
-									}).finally(() => {
-										// Hide loader and enable button
-										button.disabled = false;
-										buttonText.style.display = "inline";
-										buttonLoader.style.display = "none";
-									});
-								});
-
-								function showModal(message, type) {
-									var modal = document.getElementById("status-modal");
-									var modalMessage = document.getElementById("modal-message");
-
-									modalMessage.textContent = message;
-									modalMessage.className = type; // Apply success or error class
-
-									modal.style.display = "block";
-
-									// Close modal on click of close button or outside modal
-									var closeBtn = document.getElementsByClassName("close")[0];
-									closeBtn.onclick = function () {
-										modal.style.display = "none";
-									}
-									window.onclick = function (event) {
-										if (event.target == modal) {
-											modal.style.display = "none";
-										}
-									}
-								}
+								
 							</script>
 
 
@@ -858,7 +798,8 @@
 					<hr class="bg-color-light opacity-1">
 					<div class="row">
 						<div class="col-lg-6 mt-4">
-							<p class="text-start text-3-5 font-weight-semi-bold text-light mb-0">Ekam Universe © 2024. All
+							<p class="text-start text-3-5 font-weight-semi-bold text-light mb-0">Ekam Universe © 2024.
+								All
 								Rights Reserved.</p>
 						</div>
 						<div class="col-lg-6 text-lg-end mt-4">
