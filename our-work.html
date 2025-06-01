@@ -59,7 +59,7 @@
 
 <body>
     <div class="body">
-               <header id="header"
+        <header id="header"
             data-plugin-options="{'stickyScrollUp': false, 'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 1, 'stickyHeaderContainerHeight': 72}">
             <div class="header-body border-top-0 bg-quaternary box-shadow-none h-auto">
                 <div class="header-container container p-static">
@@ -92,6 +92,9 @@
                                                         Us</a>
                                                 </li>
                                                 <li>
+                                                    <a class="nav-link active" href="#">Our Work</a>
+                                                </li>
+                                                <li>
                                                     <a class="nav-link"
                                                         href="https://ekamuniverse.github.io/ekamuniverse-master/?scrollTo=services">Services</a>
                                                 </li>
@@ -112,6 +115,7 @@
                 </div>
             </div>
         </header>
+
         <section class="section section-height-1 border-0 m-0">
             <div class="container py-4">
                 <div class="row mb-5">
@@ -138,10 +142,8 @@
                             <a href="#" class="filter-btn" id="app"
                                 style="padding: 12px 25px; background: var(--quaternary-rgba-30); color: var(--light); text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">App
                                 Development</a>
-                            <a href="#" class="filter-btn" id="design"
-                                style="padding: 12px 25px; background: var(--quaternary-rgba-30); color: var(--light); text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">Design</a>
-                            <a href="#" class="filter-btn" id="seo"
-                                style="padding: 12px 25px; background: var(--quaternary-rgba-30); color: var(--light); text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">SEO</a>
+                            <a href="#" class="filter-btn" id="techops"
+                                style="padding: 12px 25px; background: var(--quaternary-rgba-30); color: var(--light); text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">TechOps</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +152,7 @@
                     style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; min-height: 200px; justify-items: center; padding: 10px;">
                     <!-- Add responsive grid styles -->
                     <style>
-                        @media (max-width: 768px) {
+                        @media (max-width: 1200px) {
                             .portfolio-list {
                                 grid-template-columns: 1fr !important;
                             }
@@ -158,6 +160,40 @@
                             .portfolio-item {
                                 width: 100% !important;
                             }
+
+                            .portfolio-image img {
+                                object-fit: contain !important;
+                                width: 100% !important;
+                                height: 100% !important;
+                                background: #000;
+                                /* Optional: to fill empty space */
+                            }
+
+                            .portfolio-image {
+                                height: 200px !important;
+                                /* or adjust as needed */
+                            }
+                        }
+
+                        .portfolio-list {
+                            align-items: stretch;
+                        }
+
+                        .portfolio-item {
+                            display: flex;
+                            height: 100%;
+                        }
+
+                        .portfolio-item .card {
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+                        }
+
+                        .portfolio-item .card-body {
+                            flex: 1 1 auto;
+                            display: flex;
+                            flex-direction: column;
                         }
                     </style>
                     <!-- Web Development Project -->
@@ -166,191 +202,566 @@
                             style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
                             <div class="card-body p-5">
                                 <div class="portfolio-image mb-4"
-                                    style="height: 200px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouselSiddheshwar" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/siddheshwar-tech.png"
+                                                    class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;"
+                                                    alt="Siddheshwar Technoforge">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/siddheshwar-tech2.png"
+                                                    class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;"
+                                                    alt="Siddheshwar Technoforge">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/siddheshwar-tech3.png"
+                                                    class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;"
+                                                    alt="Siddheshwar Technoforge">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselSiddheshwar" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselSiddheshwar" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">Web
+                                    Development
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    Siddheshwar Technoforge Website
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Modern website for a
+                                    manufacturing company built with Next.js, showcasing their industrial capabilities,
+                                    product range,
+                                    and company values.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Next.js</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Tailwind
+                                        CSS</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">TypeScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="web" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouselArrisTooling" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/arristooling1.png" class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;" alt="Arris Tooling">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/arristooling2.png" class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;" alt="Arris Tooling">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/arristooling3.png" class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;" alt="Arris Tooling">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselArrisTooling" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselArrisTooling" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">Web
+                                    Development
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    Arris Tooling Website
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Modern website for a
+                                    Full-stack website for a precision tooling manufacturer, built with Next.js and
+                                    MongoDB. Includes dynamic content
+                                    management and optimized performance for both frontend and backend.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Next.js</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">MongoDB</span>
+                                    <span class="badge"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Tailwind
+                                        CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="web" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                     <i class="fas fa-globe fa-3x" style="color: var(--primary);"></i>
                                 </div>
                                 <div class="portfolio-category mb-2" style="color: var(--primary);">Web
                                     Development
                                 </div>
                                 <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    E-Commerce Platform</h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Modern
-                                    e-commerce solution with advanced features and seamless user experience.
-                                </p>
-                                <div class="portfolio-tech mb-4">
+                                    DK International Website
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Admin dashboard for managing
+                                    kitchenware products, users, and orders. Built with a React frontend, Express
+                                    backend, and
+                                    MongoDB for database management.</p>
+                                <div class="portfolio-tech">
                                     <span class="badge me-2"
                                         style="background: var(--primary-rgba-20); color: var(--primary);">React</span>
                                     <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Node.js</span>
-                                    <span class="badge"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Express.js</span>
+                                    <span class="badge me-2"
                                         style="background: var(--primary-rgba-20); color: var(--primary);">MongoDB</span>
                                 </div>
-                                <div class="portfolio-links">
-                                    <a href="#" class="btn btn-primary btn-gradient me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-quaternary">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="web" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-globe fa-3x" style="color: var(--primary);"></i>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">Web
+                                    Development
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    DK International Website
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Admin dashboard for managing
+                                    kitchenware products, users, and orders. Built with a React frontend, Express
+                                    backend, and
+                                    MongoDB for database management.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">React</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Express.js</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">MongoDB</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- App Development Project -->
+                    <!-- fas fa-mobile-alt fa-3x -->
                     <div class="portfolio-item" data-filter-by="app" style="opacity: 1; transition: all 0.3s ease;">
                         <div class="card border-0"
                             style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
                             <div class="card-body p-5">
                                 <div class="portfolio-image mb-4"
-                                    style="height: 200px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-mobile-alt fa-3x" style="color: var(--primary);"></i>
+                                    style="height: 500px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouseldkapp" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/dkapp1.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;"
+                                                    alt="DK International">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/dkapp2.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;"
+                                                    alt="DK International">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/dkapp3.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;"
+                                                    alt="DK International">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouseldkapp" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouseldkapp" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="portfolio-category mb-2" style="color: var(--primary);">App
                                     Development
                                 </div>
                                 <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    Fitness Tracking App</h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Cross-platform
-                                    mobile app for fitness enthusiasts with real-time tracking.</p>
-                                <div class="portfolio-tech mb-4">
+                                    DK International App
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Mobile application designed
+                                    to manage and track factory stock efficiently. Built with React Native, it provides
+                                    a
+                                    seamless interface for monitoring inventory levels, stock movements, and real-time
+                                    updates across operations.The app helps factory teams maintain accurate stock
+                                    records and streamline daily inventory tasks.</p>
+                                <div class="portfolio-tech">
                                     <span class="badge me-2"
                                         style="background: var(--primary-rgba-20); color: var(--primary);">React
                                         Native</span>
                                     <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Firebase</span>
-                                    <span class="badge"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Redux</span>
-                                </div>
-                                <div class="portfolio-links">
-                                    <a href="#" class="btn btn-primary btn-gradient me-2">Play Store</a>
-                                    <a href="#" class="btn btn-quaternary">App Store</a>
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Mobile
+                                        UI</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Inventory
+                                        Management</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Cross-Platform</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Design Project -->
-                    <div class="portfolio-item" data-filter-by="design" style="opacity: 1; transition: all 0.3s ease;">
-                        <div class="card border-0"
-                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
-                            <div class="card-body p-5">
-                                <div class="portfolio-image mb-4"
-                                    style="height: 200px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-paint-brush fa-3x" style="color: var(--primary);"></i>
-                                </div>
-                                <div class="portfolio-category mb-2" style="color: var(--primary);">UX/UI
-                                    Design
-                                </div>
-                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    Brand Identity Design</h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Complete brand
-                                    identity package including logo, guidelines, and marketing materials.
-                                </p>
-                                <div class="portfolio-tech mb-4">
-                                    <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Figma</span>
-                                    <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Adobe
-                                        CC</span>
-                                    <span class="badge"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Sketch</span>
-                                </div>
-                                <div class="portfolio-links">
-                                    <a href="#" class="btn btn-primary btn-gradient me-2">View Design</a>
-                                    <a href="#" class="btn btn-quaternary">Download</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Analytics Project -->
-                    <div class="portfolio-item" data-filter-by="web" style="opacity: 1; transition: all 0.3s ease;">
-                        <div class="card border-0"
-                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
-                            <div class="card-body p-5">
-                                <div class="portfolio-image mb-4"
-                                    style="height: 200px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-chart-line fa-3x" style="color: var(--primary);"></i>
-                                </div>
-                                <div class="portfolio-category mb-2" style="color: var(--primary);">Web
-                                    Development
-                                </div>
-                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    Analytics Dashboard</h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Real-time
-                                    analytics dashboard with interactive charts and data visualization.</p>
-                                <div class="portfolio-tech mb-4">
-                                    <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Vue.js</span>
-                                    <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">D3.js</span>
-                                    <span class="badge"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Python</span>
-                                </div>
-                                <div class="portfolio-links">
-                                    <a href="#" class="btn btn-primary btn-gradient me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-quaternary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SEO Project -->
-                    <div class="portfolio-item" data-filter-by="seo" style="opacity: 1; transition: all 0.3s ease;">
-                        <div class="card border-0"
-                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
-                            <div class="card-body p-5">
-                                <div class="portfolio-image mb-4"
-                                    style="height: 200px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-search fa-3x" style="color: var(--primary);"></i>
-                                </div>
-                                <div class="portfolio-category mb-2" style="color: var(--primary);">SEO
-                                    Optimization</div>
-                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    Local Business SEO</h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Complete SEO
-                                    optimization resulting in 300% increase in organic traffic.</p>
-                                <div class="portfolio-tech mb-4">
-                                    <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Google
-                                        Analytics</span>
-                                    <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">SEMrush</span>
-                                    <span class="badge"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Ahrefs</span>
-                                </div>
-                                <div class="portfolio-links">
-                                    <a href="#" class="btn btn-primary btn-gradient me-2">View Results</a>
-                                    <a href="#" class="btn btn-quaternary">Case Study</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gaming Project -->
                     <div class="portfolio-item" data-filter-by="app" style="opacity: 1; transition: all 0.3s ease;">
                         <div class="card border-0"
                             style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
                             <div class="card-body p-5">
                                 <div class="portfolio-image mb-4"
-                                    style="height: 200px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-gamepad fa-3x" style="color: var(--primary);"></i>
+                                    style="height: 500px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouselProcrypto" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/procrypto1.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;" alt="Procrypto">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/procrypto2.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;" alt="Procrypto">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/procrypto3.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;" alt="Procrypto">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselProcrypto" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselProcrypto" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="portfolio-category mb-2" style="color: var(--primary);">App
                                     Development
                                 </div>
                                 <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    Gaming Platform</h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Multiplayer
-                                    gaming platform with real-time communication and leaderboards.</p>
-                                <div class="portfolio-tech mb-4">
+                                    ProCrypto App
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">A cross-platform hybrid
+                                    application using Flutter framework and Dart language for keeping a track and
+                                    maintaining all
+                                    your Crypto Currency transactions at one place and also view and monitor your
+                                    favorite Crypto Currency with Candle Stick
+                                    charts that can be modified according to your choice</p>
+                                <div class="portfolio-tech">
                                     <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Unity</span>
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Flutter</span>
                                     <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Socket.io</span>
-                                    <span class="badge"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">AWS</span>
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Dart</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">REST
+                                        API</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Cross-Platform</span>
                                 </div>
-                                <div class="portfolio-links">
-                                    <a href="#" class="btn btn-primary btn-gradient me-2">Play Now</a>
-                                    <a href="#" class="btn btn-quaternary">Leaderboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="app" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 500px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouselPortfolio" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/portfolio1.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;" alt="Portfolio">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/portfolio2.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;" alt="Portfolio">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/portfolio3.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;" alt="Portfolio">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselPortfolio" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselPortfolio" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">App
+                                    Development
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    ProtFolio App
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">A cross-platform hybrid
+                                    application using Flutter framework and Dart language for a revolutionary way of
+                                    presenting ones
+                                    own self cum his/her resume so that the resume is real-time updated and is never
+                                    lost or misplaced</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Flutter</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Dart</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Cross-Platform</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="app" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 500px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouselCovidstatus" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/covidstatus1.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;"
+                                                    alt="Covid Status">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/covidstatus2.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;"
+                                                    alt="Covid Status">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/covidstatus3.png" class="d-block w-100 h-100"
+                                                    style="object-fit: contain; border-radius: 12px;"
+                                                    alt="Covid Status">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselCovidstatus" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselCovidstatus" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">App
+                                    Development
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    Covid Status App
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">An Android application made
+                                    using Kotlin to keep a track of total cases, active cases, recovered cases and
+                                    deaths and
+                                    also to keep a track of number of vaccine registrations and doses taken in different
+                                    categories(health workers,
+                                    frontline workers, senior citizens, etc.) in India during the Covid-19 pandemic</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Kotlin</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">MVVM
+                                        Architecture</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">ViewModel</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">REST
+                                        API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Techops Project -->
+                    <div class="portfolio-item" data-filter-by="techops" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 2rem;">
+                                    <i class="fas fa-server fa-3x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-plus fa-2x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-cloud fa-3x" style="color: var(--primary);"></i>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">TechOps
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    CI/CD Pipeline with Jenkins and GitHub
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Implemented a complete CI/CD
+                                    pipeline using Jenkins to automate testing and deployment of a Node.js application.
+                                    Configured builds to trigger on every Git push, integrated unit testing and linting,
+                                    and used Pipeline as Code via
+                                    Jenkinsfile. The application was deployed to staging and production environments
+                                    using Docker and SSH.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Jenkins</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">GitHub</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Docker</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">CI/CD</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="techops" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 2rem;">
+                                    <i class="fas fa-server fa-3x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-plus fa-2x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-cloud fa-3x" style="color: var(--primary);"></i>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">TechOps
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    Dockerized Multi-Service Application
+                                </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Containerized a full-stack
+                                    application consisting of frontend, backend, and database services using Docker.
+                                    Created
+                                    custom Dockerfiles for Node.js and MongoDB, configured isolated networks and
+                                    persistent volumes via Docker Compose, and
+                                    implemented .env files for secure and flexible environment configuration.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Docker</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Docker
+                                        Compose</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Node.js</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">MongoDB</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Microservices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="techops" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 2rem;">
+                                    <i class="fas fa-server fa-3x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-plus fa-2x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-cloud fa-3x" style="color: var(--primary);"></i>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">TechOps
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    Infrastructure as Code (IaC) with Terraform on AWS </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Automated provisioning of
+                                    AWS resources using Terraform. Provisioned and managed EC2, VPC, S3, and RDS using
+                                    modular and
+                                    reusable Terraform code.
+                                    Implemented remote state management with S3 and DynamoDB to ensure safe and
+                                    collaborative infrastructure updates using
+                                    terraform plan and apply workflows.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Terraform</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">AWS</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">EC2</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">S3</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">IaC</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Remote
+                                        State</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-filter-by="techops" style="opacity: 1; transition: all 0.3s ease;">
+                        <div class="card border-0"
+                            style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
+                            <div class="card-body p-5">
+                                <div class="portfolio-image mb-4"
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 2rem;">
+                                    <i class="fas fa-server fa-3x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-plus fa-2x" style="color: var(--primary);"></i>
+                                    <i class="fas fa-cloud fa-3x" style="color: var(--primary);"></i>
+                                </div>
+                                <div class="portfolio-category mb-2" style="color: var(--primary);">TechOps
+                                </div>
+                                <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
+                                    Kubernetes Deployment for Scalable Web App </h4>
+                                <p class="portfolio-description text-light opacity-75 mb-4">Deployed a containerized
+                                    application on a Kubernetes cluster using Helm for streamlined management. Wrote
+                                    Kubernetes manifests for deployments, services, and ingress resources. Implemented
+                                    Helm charts for simplified release handling, along with autoscaling and rolling
+                                    updates for high availability and zero-downtime deployments.</p>
+                                <div class="portfolio-tech">
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Kubernetes</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Helm</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Docker</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">CI/CD</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Autoscaling</span>
+                                    <span class="badge me-2"
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Rolling
+                                        Updates</span>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +908,8 @@
                                 Rights Reserved.</p>
                         </div>
                         <div class="col-lg-6 text-lg-end mt-4">
-                            <a href="privacy-policy.html" class="text-color-grey text-color-hover-primary">Privacy Policy</a>
+                            <a href="privacy-policy.html" class="text-color-grey text-color-hover-primary">Privacy
+                                Policy</a>
                             <a href="terms-of-use.html" class="text-color-grey text-color-hover-primary ms-3">Terms of
                                 Use</a>
                         </div>
