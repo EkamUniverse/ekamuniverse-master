@@ -318,26 +318,54 @@
                             style="background: linear-gradient(135deg, var(--quaternary) 0%, var(--quaternary--100) 100%); border-radius: 20px; overflow: hidden;">
                             <div class="card-body p-5">
                                 <div class="portfolio-image mb-4"
-                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-globe fa-3x" style="color: var(--primary);"></i>
+                                    style="height: 300px; background: var(--quaternary-rgba-30); border-radius: 12px; overflow: hidden;">
+                                    <div id="carouselMondialGeeks" class="carousel slide h-100" data-bs-ride="carousel">
+                                        <div class="carousel-inner h-100">
+                                            <div class="carousel-item active h-100">
+                                                <img src="img/portfolio/mondialgeeks1.png" class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;" alt="Mondial Geeks">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/mondialgeeks2.png" class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;" alt="Mondial Geeks">
+                                            </div>
+                                            <div class="carousel-item h-100">
+                                                <img src="img/portfolio/mondialgeeks3.png" class="d-block w-100 h-100"
+                                                    style="object-fit: cover; border-radius: 12px;" alt="Mondial Geeks">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselMondialGeeks" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselMondialGeeks" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="portfolio-category mb-2" style="color: var(--primary);">Web
                                     Development
                                 </div>
                                 <h4 class="portfolio-title text-light mb-3" style="font-size: 1.75rem;">
-                                    DK International Website
+                                    Mondial Geeks Website
                                 </h4>
-                                <p class="portfolio-description text-light opacity-75 mb-4">Admin dashboard for managing
-                                    kitchenware products, users, and orders. Built with a React frontend, Express
-                                    backend, and
-                                    MongoDB for database management.</p>
+                                <p class="portfolio-description text-light opacity-75 mb-4">A modern and responsive
+                                    website built for Mondial Geeks, a company specializing in Digital Marketing,
+                                    Content Studio
+                                    services, and Product Prototyping. Developed using React and styled with Tailwind
+                                    CSS for a clean and scalable UI.</p>
                                 <div class="portfolio-tech">
                                     <span class="badge me-2"
                                         style="background: var(--primary-rgba-20); color: var(--primary);">React</span>
                                     <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">Express.js</span>
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Tailwind
+                                        CSS</span>
                                     <span class="badge me-2"
-                                        style="background: var(--primary-rgba-20); color: var(--primary);">MongoDB</span>
+                                        style="background: var(--primary-rgba-20); color: var(--primary);">Responsive
+                                        UI</span>
                                 </div>
                             </div>
                         </div>
